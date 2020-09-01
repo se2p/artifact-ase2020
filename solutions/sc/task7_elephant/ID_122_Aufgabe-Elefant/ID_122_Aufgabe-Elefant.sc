@@ -1,0 +1,43 @@
+program strid "ID_122_Aufgabe-Elefant"
+
+actor Stage is ScratchStage begin 
+    image strid "Bühnenbild1" "797b03bdb8cf6ccfc30c0692d533d998.png"
+    image strid "Hintergrund-Manege-klein" "79b6284624632e81a5f0bbe203f9df84.svg"
+    sound Plopp "83a9787d4cb6f3b7632b4ddfebf74367.wav"
+
+
+    script on bootstrap do begin 
+        changeActiveGraphicTo("Hintergrund-Manege-klein")
+    end 
+
+end 
+
+actor Elefant1 is ScratchSprite begin 
+    image Elefant1 "c002a84c038ca40e9ae8cb8787e31d3c.svg"
+    image Elefant3 "928ad58f623e44e8dca302c077d46c2f.svg"
+    image Elefant5 "6cc644abb992090fcfc64c1d47c0520d.svg"
+    image Elefant4 "8601bb462d5462d06b0dbfff42f929cf.svg"
+    image Elefant6 "441b8b425ecea279401e2af2030c4346.svg"
+    sound Plopp "83a9787d4cb6f3b7632b4ddfebf74367.wav"
+
+
+    script on bootstrap do begin 
+        changeActiveGraphicTo("Elefant4")
+    end 
+
+    script on startup do begin 
+        repeat 10 times begin 
+            changeCostumeTo("Elefant1")
+            wait 1 seconds 
+            changeCostumeTo("Elefant3")
+            wait 1 seconds 
+            changeCostumeTo("Elefant4")
+            wait 1 seconds 
+            changeCostumeTo("Elefant5")
+            wait 1 seconds 
+            changeCostumeTo("Elefant6")
+            wait 1 seconds 
+        end 
+    end 
+
+end 
